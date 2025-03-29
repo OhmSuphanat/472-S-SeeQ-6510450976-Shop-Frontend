@@ -41,10 +41,10 @@ jobs:
           file: ./Dockerfile
           push: true
           tags: |
-            ${{ secrets.DOCKER_USERNAME }}/472-S-SeeQ-6510450976-Shop-Frontend:latest
-            ${{ secrets.DOCKER_USERNAME }}/472-S-SeeQ-6510450976-Shop-Frontend:${{ github.sha }}
-          cache-from: type=registry,ref=${{ secrets.DOCKER_USERNAME }}/472-S-SeeQ-6510450976-Shop-Frontend:buildcache
-          cache-to: type=registry,ref=${{ secrets.DOCKER_USERNAME }}/472-S-SeeQ-6510450976-Shop-Frontend:buildcache,mode=max
+            ${{ secrets.DOCKER_USERNAME }}/472-s-seeq-6510450976-shop-frontend:latest
+            ${{ secrets.DOCKER_USERNAME }}/472-s-seeq-6510450976-shop-frontend:${{ github.sha }}
+          cache-from: type=registry,ref=${{ secrets.DOCKER_USERNAME }}/472-s-seeq-6510450976-shop-frontend:buildcache
+          cache-to: type=registry,ref=${{ secrets.DOCKER_USERNAME }}/472-s-seeq-6510450976-shop-frontend:buildcache,mode=max
 
   tag:
     runs-on: ubuntu-latest
